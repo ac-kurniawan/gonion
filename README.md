@@ -21,10 +21,11 @@ gonion g -r github.com/ac-kurniawan/gonion
 
 ## Result
 ```
-/core
-    /model
-    service.go
-    repository.go
-/adaptor
-/interface
+/{{moduleName}}
+    /core
+        /model
+        service.go
+        repository.go
+    /adaptor
+    /interface
 ```
