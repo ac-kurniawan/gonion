@@ -71,8 +71,8 @@ func Generate(repository string) {
 	AddFile(rootPath+"/main.go", HydrateTemplate(MainFile, data))
 	AddFile(rootPath+"/core/service.go", HydrateTemplate(CoreServiceFile, data))
 	AddFile(rootPath+"/core/repository.go", HydrateTemplate(CoreRepositoryFile, data))
-	AddFile(rootPath+"/core/repository.go", HydrateTemplate(CoreRepositoryFile, data))
-	AddFile(rootPath+"/core/repository.go", HydrateTemplate(GitIgnoreFile, data))
+	AddFile(rootPath+"/core/Dockerfile", HydrateTemplate(DockerFile, data))
+	AddFile(rootPath+"/core/.gitignore", HydrateTemplate(GitIgnoreFile, data))
 	AddFile(rootPath+"/go.mod", HydrateTemplate(GoModFile, data))
 
 	fmt.Println("install dependencies")
