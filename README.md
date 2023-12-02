@@ -31,4 +31,5 @@ gonion g -r github.com/ac-kurniawan/gonion
     mod.go
     Dockerfile
     .gitignore
+    properties.yml
 ```
