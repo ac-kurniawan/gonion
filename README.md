@@ -19,5 +19,12 @@ shorthand
 gonion g -r github.com/ac-kurniawan/gonion
 ```
 
-## Reference
-https://netflixtechblog.com/ready-for-changes-with-hexagonal-architecture-b315ec967749
+## Result
+```
+/core
+    /model
+    service.go
+    repository.go
+/adaptor
+/interface
+```
