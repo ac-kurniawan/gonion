@@ -28,4 +28,7 @@ gonion g -r github.com/ac-kurniawan/gonion
         repository.go
     /adaptor
     /interface
+    mod.go
+    Dockerfile
+    .gitignore
 ```
