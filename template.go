@@ -7,7 +7,7 @@ const (
 	GoModFile          = "module {{.moduleRepository}}\n\ngo 1.21.3"
 	CoreServiceFile    = "package core\n\nimport \"context\"\n\ntype I{{.moduleName}}Service interface {\n\tHelloWorld(ctx context.Context)\n}"
 	CoreRepositoryFile = "package core\n\ntype IRepository interface {\n}"
-	GitIgnoreFile      = "*.exe\n*.exe~\n*.dll\n*.so\n*.dylib\n\n*.test\n\n*.out\n\ngo.work\n\n.DS_Store\nbin/\n.idea\n.vs_code"
+	GitIgnoreFile      = "*.exe\n*.exe~\n*.dll\n*.so\n*.dylib\n\n*.test\n\n*.out\n\ngo.work\n\n.DS_Store\nbin/\n.idea\n.vscode"
 	DockerFile         = "FROM golang:1.21 as build\nWORKDIR /app\nCOPY go.mod ./\nCOPY go.sum ./\nRUN go mod tidy\nCOPY . ./\nRUN CGO_ENABLED=0 go build -o main\n\nFROM gcr.io/distroless/static-debian11\nWORKDIR /app\nUSER nonroot:nonroot\nCOPY --from=build /app/main /app/main\nCOPY --from=build /app/properties.yml /app/properties.yml\nEXPOSE 8080\nENTRYPOINT [\"./main\"]"
 
 	CoreDirectory      = "core"
